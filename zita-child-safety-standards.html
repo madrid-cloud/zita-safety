@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Safety Standards – Zita</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0A0A12;
+      --surface:   #12121E;
+      --border:    #1E1E32;
+      --violet:    #7C3AED;
+      --violet-dim:#4B2292;
+      --emerald:   #22C55E;
+      --text:      #E8E8F0;
+      --muted:     #8888A8;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .logo span { color: var(--violet); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero-sub {
+      color: var(--muted);
+      max-width: 580px;
+      font-size: 1.05rem;
+    }
+
+    /* ── Content ── */
+    main { padding: 56px 0 80px; }
+
+    section { margin-bottom: 52px; }
+
+    h2 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1.2em;
+      background: var(--violet);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p { color: var(--muted); margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: var(--text); font-weight: 500; }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 14px;
+    }
+    ul li {
+      color: var(--muted);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 8px;
+    }
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--violet);
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--emerald);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .callout p { margin: 0; color: var(--text); }
+    .callout .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+    }
+    .contact-card .name {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .contact-card a {
+      color: var(--violet);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+    .contact-card .role {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    footer p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0;
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 40px 0 36px; }
+      main { padding: 40px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <div class="logo">Zita<span>.</span></div>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Policy Document</div>
+      <h1>Child Safety Standards</h1>
+      <p class="hero-sub">Zita is committed to maintaining a safe environment for all users and has a zero-tolerance policy toward the exploitation or abuse of children in any form.</p>
+    </div>
+  </div>
+
+  <main>
+    <div class="wrap">
+
+      <section>
+        <h2>Prohibition of Child Sexual Abuse and Exploitation</h2>
+        <p>Zita explicitly prohibits all forms of <strong>Child Sexual Abuse and Exploitation (CSAE)</strong> on its platform. This includes, but is not limited to:</p>
+        <ul>
+          <li>Child Sexual Abuse Material (CSAM) — the creation, sharing, or distribution of any sexual content involving minors</li>
+          <li>Grooming behaviours — any attempt by an adult to gain the trust of a minor for exploitative purposes</li>
+          <li>Solicitation — requests for sexual content or in-person contact of a sexual nature involving a minor</li>
+          <li>Trafficking — any activity that facilitates the commercial sexual exploitation of a child</li>
+          <li>Any other conduct that sexualises, endangers, or exploits individuals under the age of 18</li>
+        </ul>
+        <div class="callout">
+          <div class="label">Zero Tolerance</div>
+          <p>Any account found to be engaging in CSAE-related activity will be permanently removed and reported to the relevant authorities and the National Center for Missing & Exploited Children (NCMEC).</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>User Reporting Mechanism</h2>
+        <p>Zita provides an in-app mechanism that allows any user to report content or behaviour they believe violates these standards. Reports are reviewed promptly and appropriate action is taken, including content removal, account suspension, and referral to law enforcement where required.</p>
+        <p>To report a concern directly, users may also contact our child safety point of contact listed below.</p>
+      </section>
+
+      <section>
+        <h2>Addressing Child Sexual Abuse Material (CSAM)</h2>
+        <p>Zita has procedures in place to detect, remove, and report CSAM in accordance with applicable law. Upon identification of any suspected CSAM, Zita will:</p>
+        <ul>
+          <li>Immediately remove the content from the platform</li>
+          <li>Suspend the responsible account pending investigation</li>
+          <li>Report the material to NCMEC's CyberTipline and cooperate fully with law enforcement</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Legal Compliance</h2>
+        <p>Zita complies with all applicable child safety laws and regulations, including but not limited to the <strong>PROTECT Our Children Act</strong>, and cooperates with authorities in any investigation involving the safety of minors.</p>
+      </section>
+
+      <section>
+        <h2>Child Safety Point of Contact</h2>
+        <p>If you have a child safety concern related to Zita, please contact our designated point of contact directly:</p>
+        <div class="contact-card">
+          <div class="name">Zita Child Safety Team</div>
+          <div class="role">Developer: Zita App</div>
+          <a href="mailto:safety@zita.app">safety@zita.app</a>
+        </div>
+        <p style="margin-top:14px;">We aim to respond to all child safety reports within 24 hours.</p>
+      </section>
+
+      <section>
+        <h2>Policy Updates</h2>
+        <p>This policy was last updated in June 2025. Zita reserves the right to update these standards at any time. Continued use of the platform constitutes acceptance of the current policy.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 Zita App. All rights reserved. &nbsp;·&nbsp; <a href="mailto:safety@zita.app" style="color:var(--violet);text-decoration:none;">safety@zita.app</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
